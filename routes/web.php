@@ -54,3 +54,14 @@ Route::post('/notes', 'NotesController@create');
 Route::delete('/notes/{id}', 'NotesController@delete');
 
 Route::patch('/notes/{id}', 'NotesController@update');
+
+// Client Routes
+Route::get('/client', 'ClientController@index');
+
+Route::get('/client/create', 'ClientController@create');
+
+Route::post('/client/store', 'ClientController@store');
+
+Route::delete('/client/{id}', 'ClientController@delete');
+
+Route::patch('/client/{id}', 'clientController@update');
