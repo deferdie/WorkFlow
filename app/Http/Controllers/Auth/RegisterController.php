@@ -63,10 +63,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $companyId = str_random(60);
+
+        if($data['company_id'] != '')
+        {
+            $companyId = $data['company_id'];
+        }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'businessName' => $data['businessName'],
+            'company_id' => $companyId,
             'password' => bcrypt($data['password']),
         ]);
     }
