@@ -65,7 +65,7 @@ class RegisterController extends Controller
     {
         $companyId = str_random(60);
 
-        if($data['company_id'] != '')
+        if(isset($data['company_id']) && $data['company_id'] != '')
         {
             $companyId = $data['company_id'];
         }
