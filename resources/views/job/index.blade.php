@@ -7,7 +7,13 @@
     </div>
 
     <div class="panel-body">
-        List of jobs
+        <div class="row">
+        	@foreach($jobs as $job)
+	        	<div class="col-md-4">
+	        		asd
+	        	</div>
+	        @endforeach
+        </div>
     </div>
       
 @endsection
