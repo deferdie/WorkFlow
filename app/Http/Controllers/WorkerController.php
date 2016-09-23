@@ -12,4 +12,9 @@ class WorkerController extends Controller
     {
     	return view('worker.index');
     }
+
+    public function create()
+    {
+    	return view('worker.create');
+    }
 }
