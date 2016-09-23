@@ -27,7 +27,9 @@ Route::patch('/job/{id}/complete', 'JobController@updateStatus');
 // Worker Routes
 Route::get('/worker', 'WorkerController@index');
 
-Route::post('/worker', 'WorkerController@create');
+Route::get('/worker/create', 'WorkerController@create');
+
+Route::post('/worker', 'WorkerController@save');
 
 Route::delete('/worker/{id}', 'WorkerController@delete');
 
@@ -65,3 +67,10 @@ Route::post('/client/store', 'ClientController@store');
 Route::delete('/client/{id}', 'ClientController@delete');
 
 Route::patch('/client/{id}', 'clientController@update');
+
+// Business Settings Routes
+Route::get('business-settings', 'BusinesSettingsController@index');
+
+Route::get('business-settings/department', 'BusinesSettingsController@addDepartment');
+
+Route::post('business-settings/department', 'BusinesSettingsController@addDepartment');
